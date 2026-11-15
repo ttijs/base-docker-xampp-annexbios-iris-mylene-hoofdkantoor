@@ -1,0 +1,197 @@
+/* Root kleuren */
+:root {
+    --list-pink: #FF8A9D;
+    --list-dark-gray: #2c3e50;
+    --list-light-gray: #ecf0f1;
+    --list-white: #ffffff;
+    --list-red: #b80000ff;
+  }
+  
+  /* Body */
+  .admin-list-body {
+    font-family: Arial, sans-serif;
+    background-color: var(--list-light-gray);
+    color: var(--list-dark-gray);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Titel */
+  .admin-list-title {
+    text-align: center;
+    color: var(--list-pink);
+    font-size: 2em;
+    margin: 60px 0 40px;
+  }
+  
+  /* Container */
+  .admin-list-container {
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Kaartjes */
+  .admin-list-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--list-white);
+    padding: 15px 20px;
+    border-radius: 10px;
+    margin-bottom: 23px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-wrap: nowrap; /* nooit knoppen onder elkaar */
+  }
+  
+  /* Linkerkant (naam + API) */
+  .admin-list-card > div:first-child {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 1;  /* kan krimpen */
+    min-width: 0;    /* voorkomt overflow */
+    margin-right: 1rem;
+  }
+  
+  .admin-list-name {
+    font-weight: bold;
+    color: var(--list-dark-gray);
+    font-size: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .admin-list-api {
+    font-family: monospace;
+    font-size: 0.85rem;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  /* Acties container */
+  .admin-list-actions {
+    display: flex;
+    gap: 0.25rem;
+    flex-shrink: 0; /* knoppen krimpen niet */
+  }
+  
+  /* Buttons */
+  .admin-list-btn, .admin-list-btn-edit, .admin-list-btn-delete {
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--list-white);
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .admin-list-btn { 
+    background-color: var(--list-pink); 
+    display: inline-block; 
+    margin-bottom: 15px; 
+  }
+  .admin-list-btn:hover, 
+  .admin-list-btn-edit:hover { background-color: #ff6b84; }
+  .admin-list-btn-edit { background-color: var(--list-pink); }
+  .admin-list-btn-delete { background-color: var(--list-dark-gray); }
+  .admin-list-btn-delete:hover { background-color: var(--list-red); }
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+  }
+  
+  .modal-content {
+    background: var(--list-white);
+    padding: 1.5rem;
+    border-radius: 6px;
+    max-width: 420px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .btn-cancel, .btn-delete {
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    border: none;
+  }
+  .btn-cancel { background-color: var(--list-pink); }
+  .btn-cancel:hover { background-color: #ff6b84; }
+  .btn-delete { background-color: #c0392b; }
+  .btn-delete:hover { background-color: #a8322a; }
+  
+  /* Hamburger menu responsive */
+  .hamburger-knop {
+    display: none;
+    font-size: 1.6rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hoofd-navigatie {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .hoofd-navigatie.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 90%;
+    max-width: 320px;
+    padding: 1rem;
+    z-index: 9999;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  }
+  
+  .navigatie-lijst {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 1rem;
+  }
+
+  
+  
+  /* Kleine schermen: tekst en knoppen kleiner */
+  @media (max-width: 600px) {
+    .admin-list-name {
+      font-size: 0.85rem;
+    }
+    .admin-list-api {
+      font-size: 0.75rem;
+    }
+    .admin-list-btn-edit,
+    .admin-list-btn-delete {
+      padding: 5px 10px;
+      font-size: 0.8rem;
+    }
+  }
+  

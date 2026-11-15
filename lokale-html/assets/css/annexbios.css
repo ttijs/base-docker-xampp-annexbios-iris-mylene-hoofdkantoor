@@ -1,0 +1,475 @@
+/* Algemene reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("../img/achtergrondbios.jpg");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Arial, sans-serif;
+}
+
+main {
+  margin: auto;
+  position: relative;
+  max-width: 1200px;
+}
+
+/* Header */
+.hoofd-header {
+  background: #fff;
+  padding: 20px 0;
+}
+
+.hamburger-knop {
+  display: none;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  margin-left: 15px;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-afbeelding {
+  height: 90px;
+}
+
+.hoofd-navigatie {
+  display: flex;
+}
+
+.navigatie-lijst {
+  display: flex;
+  list-style: none;
+  gap: 60px;
+}
+
+.navigatie-link {
+  text-decoration: none;
+  color: #666;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.navigatie-link:hover {
+  color: #444;
+}
+
+/* Ticket sectie */
+.ticket-sectie {
+  background: #666;
+  padding: 15px 0;
+}
+
+.ticket-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding: 0 40px;
+}
+
+.ticket-titel {
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.ticket-formulier {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.locatie-selectie,
+.tickets-knop {
+  border: none;
+  font-size: 14px;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+.locatie-selectie {
+  background: #999;
+  color: #fff;
+  padding: 12px 20px;
+  min-width: 200px;
+  appearance: none;
+}
+
+.locatie-selectie option {
+  background: #999;
+  color: #fff;
+}
+
+.tickets-knop {
+  background: #ccc;
+  color: #666;
+  padding: 12px 25px;
+  text-transform: uppercase;
+  transition: background 0.3s;
+}
+
+.tickets-knop:hover {
+  background: #bbb;
+}
+
+.main-text-container{
+  display: block;;
+  width: 100%;
+}
+/* Zwart vak */
+.main-text {
+  background: #000;
+  color: #fff;
+  width: 100%;
+  margin: 40px auto;
+  border-radius: 8px;
+  padding: 25px;
+  font-size: 16px;
+  line-height: 1.5;
+  position: relative;
+  z-index: 10;
+}
+.main-text-bullits{
+  margin-left: 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.lees-meer {
+  line-height: 1.7;
+  color: #fff;
+  display: inline-block;
+}
+
+.lees-meer-titel {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Vestigingen grid */
+.vestigingen-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  padding: 20px;
+}
+
+.vestiging-kaart {
+  background: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: transform 0.3s;
+}
+
+.vestiging-kaart:hover {
+  transform: scale(1.05);
+}
+
+.vestiging-afbeelding {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.vestiging-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.vestiging-btn {
+  background: #666;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 10px;
+}
+
+.vestiging-btn:hover {
+  background: #444;
+}
+
+/* Film slider */
+.film-slider-container {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+  position: relative;
+  padding: 40px 0;
+}
+
+.film-slider {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  width: max-content;
+  padding: 0 20px;
+}
+
+.film-vak {
+  flex: 0 0 280px;
+  min-height: 500px;
+  max-height: 600px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.film-vak:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.film-poster {
+  width: 100%;
+  height: 45%;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  flex-shrink: 0;
+}
+
+.film-info {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+
+.film-titel {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+}
+
+.film-release,
+.film-runtime {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.film-overview {
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.4;
+  white-space: normal;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.nieuws-container {
+  display: grid;
+  grid-template-columns: 1fr; /* voor bovenste en onderste blokken */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Bovenste en onderste blok */
+.lange-blok,
+.lange-blok-onder {
+  grid-column: 1 / -1; /* full width */
+  background: #f5f5f5;
+  border-radius: 8px;
+  padding: 20px;
+  align-items: center;
+}
+
+.middelste-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* twee kolommen */
+  gap: 20px;
+  justify-content: center; /* zorgt dat de twee blokken gecentreerd staan */
+  max-width: 100%; 
+}
+
+.middelste-grid .nieuwsitem {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  width: 100%;
+  min-width: 300px; /* zorgt dat ze niet te smal worden */
+}
+
+
+/* Nieuws afbeeldingen en tekst */
+.nieuws-afbeelding {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.nieuwsitem h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.nieuwsitem p {
+  font-size: 16px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .logo {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .hamburger-knop {
+    display: block;
+  }
+  .hoofd-navigatie {
+    display: none;
+    width: 100%;
+  }
+  .hoofd-navigatie.open {
+    display: block;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .navigatie-lijst {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    text-align: center;
+  }
+  .navigatie-link {
+    padding: 10px 0;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container,
+  .ticket-container {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+  .ticket-formulier {
+    flex-direction: column;
+    width: 100%;
+  }
+  .locatie-selectie,
+  .tickets-knop {
+    width: 100%;
+    max-width: 300px;
+  }
+  .zwart-vak {
+    font-size: 16px;
+    padding: 20px;
+  }
+  .vestigingen-grid {
+    grid-template-columns: 1fr;
+  }
+  .middelste-grid {
+    grid-template-columns: 1fr; /* mobiel: één kolom */
+  }
+  .lange-blok,
+  .lange-blok-onder,
+  .nieuwsitem {
+    width: 100%;
+  }
+  .lange-blok img,
+  .lange-blok-onder img,
+  .nieuws-afbeelding {
+    max-height: 250px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .film-vak {
+    flex: 0 0 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 0 auto;
+  }
+  .film-poster {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+  }
+  .film-info {
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: visible;
+  }
+  .film-overview {
+    overflow: visible;
+    text-overflow: clip;
+  }
+  .nieuwsitem p {
+    font-size: 14px;
+  }
+} 

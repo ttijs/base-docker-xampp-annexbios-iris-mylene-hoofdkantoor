@@ -1,0 +1,93 @@
+/* Kleuren */
+:root {
+    --avf-pink: #FF8A9D;
+    --avf-dark-gray: #2c3e50;
+    --avf-light-gray: #ecf0f1;
+    --avf-white: #ffffff;
+    --avf-pink-hover: #ff6b84;
+}
+
+/* Body en titel */
+.avf-body {
+    font-family: Arial, sans-serif;
+    background-color: var(--avf-light-gray);
+    color: var(--avf-dark-gray);
+    margin: 0;
+    padding: 0px;
+    position: relative;
+}
+
+.avf-title {
+    margin-top: 70px;
+    text-align: center;
+    color: var(--avf-pink);
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.avf-form {
+    background-color: var(--avf-white);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Labels en inputs */
+.avf-label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.avf-input, .avf-select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+.avf-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--avf-dark-gray);
+    color: var(--avf-white);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.avf-btn:hover {
+    background-color: var(--avf-pink);
+}
+
+.avf-btn-terug-vestiging-form {
+    margin-left: 450px;
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: var(--avf-pink);
+    color: var(--avf-white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.avf-btn-terug-vestiging-form:hover {
+    background-color: var(--avf-pink-hover);
+}
+
+
+/* Responsive */
+@media (max-width: 600px) {
+    .avf-title {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+}
